@@ -1,6 +1,15 @@
 ---
-title: "Hello world"
+title: ""
 format: html
 ---
 
-## Boo
+```{mermaid}
+stateDiagram-v2
+
+    Still --> Bored
+    Bored --> Doing
+    Doing --> Random
+    Random --> Crap
+    Crap --> Still
+
+```
