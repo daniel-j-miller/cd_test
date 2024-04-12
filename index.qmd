@@ -31,7 +31,8 @@ HALE_LE_wide <- HALE_wide |>
   mutate(ratio = HALE/LE)
 
 ggplot(HALE_LE_wide[HALE_LE_wide$age=="birth" & HALE_LE_wide$sex=="Female",]) +
-  geom_point( aes(LE,HALE, group=country)) +
+  geom_point( aes(LE,HALE, group=country), 
+            colour=if_else(HALE_LE_wide$country[HALE_LE_wide$age=="birth" & HALE_LE_wide$sex=="Female"]=="Haiti", "black","#636363"), alpha=0.7) +
   geom_text(aes(LE,HALE, label=country, group = country),
             nudge_x = 2, nudge_y = 0.25, 
             colour=if_else(HALE_LE_wide$country[HALE_LE_wide$age=="birth" & HALE_LE_wide$sex=="Female"]=="Haiti", "black",NA)) +
@@ -39,5 +40,6 @@ ggplot(HALE_LE_wide[HALE_LE_wide$age=="birth" & HALE_LE_wide$sex=="Female",]) +
   labs(title = 'Year: {as.integer(frame_time)}') +
   ylab("Health-adjusted life expectancy") +
   xlab("Life expectancy") +
-  theme(legend.position = "none")
+  theme(legend.position = "none") +
+  coord_equal()
 ```
