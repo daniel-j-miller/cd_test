@@ -1,15 +1,43 @@
 ---
 title: ""
-format: html
+format:
+  html:
+    code-fold: true
+    code-summary: "Show the code"
+engine: knitr
 ---
 
-```{mermaid}
-stateDiagram-v2
+It's hardly Hans Rosling but...
 
-    Still --> Bored
-    Bored --> Doing
-    Doing --> Random
-    Random --> Crap
-    Crap --> Still
+```{r}
+suppressMessages(library(dplyr))
+suppressMessages(library(readr))
+suppressMessages(library(stringr))
+suppressMessages(library(ggplot2))
+suppressMessages(library(gganimate))
 
+HALE_wide <- read_csv("data/WHO_HALE_data.csv", show_col_types = FALSE) |>
+  filter(Dim1ValueCode != "SEX_BTSX") |>
+  mutate(age = if_else(str_detect(Indicator, "birth"), "birth", "60 years")) |>
+  select(country = Location,year = Period, age, sex = Dim1, HALE = Value)
+
+LE_wide <- read_csv("data/WHO_LE_data.csv", show_col_types = FALSE) |>
+  filter(Dim1ValueCode != "SEX_BTSX") |>
+  mutate(age = if_else(str_detect(Indicator, "birth"), "birth", "60 years")) |>
+  select(country = Location,year = Period, age, sex = Dim1, LE = Value)
+
+HALE_LE_wide <- HALE_wide |>
+  left_join(LE_wide, by=c("country","year", "age", "sex")) |>
+  mutate(ratio = HALE/LE)
+
+ggplot(HALE_LE_wide[HALE_LE_wide$age=="birth" & HALE_LE_wide$sex=="Female",]) +
+  geom_point( aes(LE,HALE, group=country)) +
+  geom_text(aes(LE,HALE, label=country, group = country),
+            nudge_x = 2, nudge_y = 0.25, 
+            colour=if_else(HALE_LE_wide$country[HALE_LE_wide$age=="birth" & HALE_LE_wide$sex=="Female"]=="Haiti", "black",NA)) +
+  transition_time(year) +
+  labs(title = 'Year: {as.integer(frame_time)}') +
+  ylab("Health-adjusted life expectancy") +
+  xlab("Life expectancy") +
+  theme(legend.position = "none")
 ```

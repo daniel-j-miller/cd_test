@@ -20,6 +20,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -33,9 +67,6 @@ ul.task-list li input[type="checkbox"] {
 <script src="index_files/libs/bootstrap/bootstrap.min.js"></script>
 <link href="index_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="index_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
-<script src="index_files/libs/quarto-diagram/mermaid.min.js"></script>
-<script src="index_files/libs/quarto-diagram/mermaid-init.js"></script>
-<link href="index_files/libs/quarto-diagram/mermaid.css" rel="stylesheet">
 
 
 </head>
@@ -48,21 +79,43 @@ ul.task-list li input[type="checkbox"] {
 
 
 
+<p>It’s hardly Hans Rosling but…</p>
 <div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">suppressMessages</span>(<span class="fu">library</span>(dplyr))</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">suppressMessages</span>(<span class="fu">library</span>(readr))</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">suppressMessages</span>(<span class="fu">library</span>(stringr))</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">suppressMessages</span>(<span class="fu">library</span>(ggplot2))</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">suppressMessages</span>(<span class="fu">library</span>(gganimate))</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>HALE_wide <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"data/WHO_HALE_data.csv"</span>, <span class="at">show_col_types =</span> <span class="cn">FALSE</span>) <span class="sc">|&gt;</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(Dim1ValueCode <span class="sc">!=</span> <span class="st">"SEX_BTSX"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">age =</span> <span class="fu">if_else</span>(<span class="fu">str_detect</span>(Indicator, <span class="st">"birth"</span>), <span class="st">"birth"</span>, <span class="st">"60 years"</span>)) <span class="sc">|&gt;</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="at">country =</span> Location,<span class="at">year =</span> Period, age, <span class="at">sex =</span> Dim1, <span class="at">HALE =</span> Value)</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>LE_wide <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"data/WHO_LE_data.csv"</span>, <span class="at">show_col_types =</span> <span class="cn">FALSE</span>) <span class="sc">|&gt;</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(Dim1ValueCode <span class="sc">!=</span> <span class="st">"SEX_BTSX"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">age =</span> <span class="fu">if_else</span>(<span class="fu">str_detect</span>(Indicator, <span class="st">"birth"</span>), <span class="st">"birth"</span>, <span class="st">"60 years"</span>)) <span class="sc">|&gt;</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="at">country =</span> Location,<span class="at">year =</span> Period, age, <span class="at">sex =</span> Dim1, <span class="at">LE =</span> Value)</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>HALE_LE_wide <span class="ot">&lt;-</span> HALE_wide <span class="sc">|&gt;</span></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">left_join</span>(LE_wide, <span class="at">by=</span><span class="fu">c</span>(<span class="st">"country"</span>,<span class="st">"year"</span>, <span class="st">"age"</span>, <span class="st">"sex"</span>)) <span class="sc">|&gt;</span></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">ratio =</span> HALE<span class="sc">/</span>LE)</span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(HALE_LE_wide[HALE_LE_wide<span class="sc">$</span>age<span class="sc">==</span><span class="st">"birth"</span> <span class="sc">&amp;</span> HALE_LE_wide<span class="sc">$</span>sex<span class="sc">==</span><span class="st">"Female"</span>,]) <span class="sc">+</span></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>( <span class="fu">aes</span>(LE,HALE, <span class="at">group=</span>country)) <span class="sc">+</span></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_text</span>(<span class="fu">aes</span>(LE,HALE, <span class="at">label=</span>country, <span class="at">group =</span> country),</span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>            <span class="at">nudge_x =</span> <span class="dv">2</span>, <span class="at">nudge_y =</span> <span class="fl">0.25</span>, </span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>            <span class="at">colour=</span><span class="fu">if_else</span>(HALE_LE_wide<span class="sc">$</span>country[HALE_LE_wide<span class="sc">$</span>age<span class="sc">==</span><span class="st">"birth"</span> <span class="sc">&amp;</span> HALE_LE_wide<span class="sc">$</span>sex<span class="sc">==</span><span class="st">"Female"</span>]<span class="sc">==</span><span class="st">"Haiti"</span>, <span class="st">"black"</span>,<span class="cn">NA</span>)) <span class="sc">+</span></span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>  <span class="fu">transition_time</span>(year) <span class="sc">+</span></span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">'Year: {as.integer(frame_time)}'</span>) <span class="sc">+</span></span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="st">"Health-adjusted life expectancy"</span>) <span class="sc">+</span></span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">"Life expectancy"</span>) <span class="sc">+</span></span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">"none"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 <div class="cell-output-display">
-<div>
-<div>
-<pre class="mermaid mermaid-js">stateDiagram-v2
-
-    Still --&gt; Bored
-    Bored --&gt; Doing
-    Doing --&gt; Random
-    Random --&gt; Crap
-    Crap --&gt; Still
-
-</pre>
-</div>
-</div>
+<p><img src="index_files/figure-html/unnamed-chunk-1-1.gif" class="img-fluid"></p>
 </div>
 </div>
 
