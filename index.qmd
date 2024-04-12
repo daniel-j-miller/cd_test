@@ -10,6 +10,8 @@ engine: knitr
 It's hardly Hans Rosling but...
 
 ```{r}
+#| label: fig-anim
+#| fig-cap: "Life Expectancy vs Health-Adjusted Life Expectancy - highlighting Haiti"
 suppressMessages(library(dplyr))
 suppressMessages(library(readr))
 suppressMessages(library(stringr))
