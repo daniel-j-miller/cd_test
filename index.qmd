@@ -1,10 +1,12 @@
 ---
-title: ""
-format:
-  html:
-    code-fold: true
-    code-summary: "Show the code"
-engine: knitr
+title: "dataseance"
+listing:
+  contents: posts
+  sort: "date desc"
+  type: default
+  categories: true
+  sort-ui: false
+  filter-ui: false
+page-layout: full
+title-block-banner: true
 ---
-
-# Nothing to see here :(
