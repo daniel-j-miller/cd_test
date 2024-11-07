@@ -1,0 +1,970 @@
+{
+  "type": "FeatureCollection",
+  "generator": "overpass-turbo",
+  "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.",
+  "timestamp": "2024-05-02T00:18:57Z",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/40293773",
+        "addr:housenumber": "9",
+        "addr:street": "Sargood Street",
+        "amenity": "pharmacy",
+        "dispensing": "yes",
+        "healthcare": "pharmacy",
+        "name": "Capital Chemist O'Connor",
+        "website": "https://www.capitalchemistoconnor.com.au/",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          149.1226107,
+          -35.2640376
+        ]
+      },
+      "id": "node/40293773"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/249527687",
+        "amenity": "pharmacy",
+        "name": "Evatt Pharmacy"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          149.0738943,
+          -35.2088096
+        ]
+      },
+      "id": "node/249527687"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/254020897",
+        "amenity": "pharmacy",
+        "dispensing": "yes",
+        "drive_through": "no",
+        "healthcare": "pharmacy",
+        "name": "Ainslie Pharmacy",
+        "website": "https://www.ainsliepharmacy.com.au/",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          149.145332,
+          -35.2616976
+        ]
+      },
+      "id": "node/254020897"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/289803453",
+        "amenity": "pharmacy",
+        "name": "Weston Pharmacy"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          149.0521376,
+          -35.3419466
+        ]
+      },
+      "id": "node/289803453"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/309018079",
+        "amenity": "pharmacy",
+        "dispensing": "yes",
+        "name": "Capital Chemist Mawson",
+        "opening_hours": "Mo-Fr 08:30-19:00; Sa,Su 09:00-18:00; PH 10:00-16:00",
+        "phone": "+61 2 6286 3644"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          149.0942877,
+          -35.3654251
+        ]
+      },
+      "id": "node/309018079"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/439750870",
+        "addr:street": "Lachlan Street",
+        "addr:unit": "Shop 2 & 3",
+        "amenity": "pharmacy",
+        "brand": "Priceline Pharmacy",
+        "brand:wikidata": "Q7242652",
+        "dispensing": "yes",
+        "healthcare": "pharmacy",
+        "name": "Priceline Pharmacy",
+        "website": "https://www.priceline.com.au/store-finder/country/AU/0172"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          149.0600666,
+          -35.2483414
+        ]
+      },
+      "id": "node/439750870"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/602907498",
+        "amenity": "pharmacy",
+        "healthcare": "pharmacy",
+        "name": "Campbell Pharmacy",
+        "opening_hours": "Mo-Fr 08:15-18:00; Sa 09:00-12:00; PH,Su off",
+        "phone": "+61 2 6248 0783",
+        "website": "https://www.campbellpharmacy.com.au/",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          149.1542146,
+          -35.2894129
+        ]
+      },
+      "id": "node/602907498"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/607142260",
+        "amenity": "pharmacy",
+        "healthcare": "pharmacy",
+        "name": "Cooleman Court Pharmacy"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          149.0531905,
+          -35.3413934
+        ]
+      },
+      "id": "node/607142260"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/646636270",
+        "amenity": "pharmacy",
+        "check_date": "2023-10-31",
+        "dispensing": "yes",
+        "drive_through": "no",
+        "healthcare": "pharmacy",
+        "name": "Florey Pharmacy",
+        "opening_hours": "Mo-Fr 08:00-20:00; PH,Sa,Su 09:00-20:00",
+        "payment:cash": "yes",
+        "payment:mastercard": "yes",
+        "payment:visa": "yes",
+        "source": "survey",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          149.0544066,
+          -35.226261
+        ]
+      },
+      "id": "node/646636270"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/670169655",
+        "amenity": "pharmacy",
+        "name": "Capital Chemist Lyneham"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          149.1248265,
+          -35.2524983
+        ]
+      },
+      "id": "node/670169655"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/776675224",
+        "amenity": "pharmacy",
+        "brand": "Chemist Warehouse",
+        "brand:wikidata": "Q48782120",
+        "brand:wikipedia": "en:Chemist Warehouse",
+        "healthcare": "pharmacy",
+        "name": "Chemist Warehouse",
+        "website": "https://www.chemistwarehouse.com.au/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          149.0838373,
+          -35.3454534
+        ]
+      },
+      "id": "node/776675224"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/864633772",
+        "amenity": "pharmacy",
+        "dispensing": "yes",
+        "healthcare": "pharmacy",
+        "name": "Capital Chemist",
+        "opening_hours": "Mo-Fr 08:30-19:00; Sa 08:30-18:00; PH,Su 09:00-18:00",
+        "source": "local_knowledge"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          149.1389414,
+          -35.2502809
+        ]
+      },
+      "id": "node/864633772"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/974403318",
+        "amenity": "pharmacy",
+        "brand": "Priceline Pharmacy",
+        "brand:wikidata": "Q7242652",
+        "brand:wikipedia": "en:Priceline (Australia)",
+        "healthcare": "pharmacy",
+        "name": "Priceline Pharmacy"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          149.1343135,
+          -35.1852758
+        ]
+      },
+      "id": "node/974403318"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/988540465",
+        "amenity": "pharmacy",
+        "healthcare": "pharmacy",
+        "name": "Caremore Pharmacy",
+        "opening_hours": "Mo-Fr 08:30-19:00; Sa 08:30-18:00; Su 09:00-17:00"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          149.1035149,
+          -35.2201909
+        ]
+      },
+      "id": "node/988540465"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1003358599",
+        "amenity": "pharmacy",
+        "branch": "Jamison",
+        "brand": "Amcal",
+        "brand:wikidata": "Q63367373",
+        "brand:wikipedia": "en:Amcal",
+        "healthcare": "pharmacy",
+        "name": "Amcal"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          149.0716082,
+          -35.2528178
+        ]
+      },
+      "id": "node/1003358599"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1326569187",
+        "amenity": "pharmacy",
+        "brand": "Amcal",
+        "healthcare": "pharmacy",
+        "level": "1",
+        "name": "Amcal"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          149.0640763,
+          -35.2381695
+        ]
+      },
+      "id": "node/1326569187"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1800279674",
+        "addr:housenumber": "3",
+        "addr:street": "Waramanga Place",
+        "amenity": "pharmacy",
+        "healthcare": "pharmacy",
+        "name": "Capital Chemist Waramanga",
+        "source": "local_knowledge"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          149.0595293,
+          -35.3527337
+        ]
+      },
+      "id": "node/1800279674"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1811922317",
+        "amenity": "pharmacy",
+        "name": "Deakin Pharmacy"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          149.1080828,
+          -35.3148471
+        ]
+      },
+      "id": "node/1811922317"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1894450103",
+        "amenity": "pharmacy",
+        "healthcare": "pharmacy",
+        "name": "Garran Pharmacy"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          149.1026956,
+          -35.3495912
+        ]
+      },
+      "id": "node/1894450103"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2002505222",
+        "amenity": "pharmacy",
+        "name": "Colbee Court Pharmacy"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          149.0895918,
+          -35.3518702
+        ]
+      },
+      "id": "node/2002505222"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2015911842",
+        "amenity": "pharmacy",
+        "name": "Chapman Pharmacy",
+        "source": "local knowledge"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          149.0407281,
+          -35.3555334
+        ]
+      },
+      "id": "node/2015911842"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2106542727",
+        "amenity": "pharmacy",
+        "name": "Holder Pharmacy"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          149.0442525,
+          -35.3366499
+        ]
+      },
+      "id": "node/2106542727"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2156894683",
+        "amenity": "pharmacy",
+        "healthcare": "pharmacy",
+        "name": "Capital Chemist"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          149.1287359,
+          -35.4139822
+        ]
+      },
+      "id": "node/2156894683"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2156916090",
+        "amenity": "pharmacy",
+        "dispensing": "yes",
+        "drive_through": "no",
+        "healthcare": "pharmacy",
+        "name": "Capital Chemist Calwell",
+        "operator": "Capital Chemist"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          149.1141074,
+          -35.4346841
+        ]
+      },
+      "id": "node/2156916090"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2160505450",
+        "amenity": "pharmacy",
+        "name": "Capital Chemist"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          149.0576873,
+          -35.3802655
+        ]
+      },
+      "id": "node/2160505450"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2160885414",
+        "amenity": "pharmacy",
+        "brand": "Priceline Pharmacy",
+        "healthcare": "pharmacy",
+        "name": "Priceline Pharmacy"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          149.0687749,
+          -35.3932124
+        ]
+      },
+      "id": "node/2160885414"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2161975190",
+        "amenity": "pharmacy",
+        "healthcare": "pharmacy",
+        "name": "Develin’s City Chemist"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          149.131895,
+          -35.278749
+        ]
+      },
+      "id": "node/2161975190"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2162572784",
+        "amenity": "pharmacy",
+        "dispensing": "yes",
+        "drive_through": "no",
+        "healthcare": "pharmacy",
+        "name": "Discount Pharmacy"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          149.1096841,
+          -35.413637
+        ]
+      },
+      "id": "node/2162572784"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2183249850",
+        "amenity": "pharmacy",
+        "name": "Yarralumla Pharmacy",
+        "opening_hours": "Mo-Fr 09:00-18:00; Sa 09:00-12:00"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          149.0979035,
+          -35.3075325
+        ]
+      },
+      "id": "node/2183249850"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2294494321",
+        "amenity": "pharmacy",
+        "name": "Capital Chemist"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          149.0938751,
+          -35.3337194
+        ]
+      },
+      "id": "node/2294494321"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2337835274",
+        "addr:street": "Iluka Street",
+        "amenity": "pharmacy",
+        "name": "Pharmacy Health"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          149.1538509,
+          -35.3328268
+        ]
+      },
+      "id": "node/2337835274"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3508131893",
+        "addr:housenumber": "17",
+        "addr:street": "Iron Knob Street",
+        "addr:unit": "1-2",
+        "amenity": "pharmacy",
+        "brand": "Chemist Warehouse",
+        "brand:wikidata": "Q48782120",
+        "dispensing": "yes",
+        "healthcare": "pharmacy",
+        "name": "Chemist Warehouse",
+        "opening_hours": "Mo-Fr 08:30-07:30; Sa-Su 09:00-18:00",
+        "website": "https://www.chemistwarehouse.com.au/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          149.1799946,
+          -35.3360361
+        ]
+      },
+      "id": "node/3508131893"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4067906041",
+        "addr:housenumber": "72-74",
+        "addr:street": "Hawker Place",
+        "amenity": "pharmacy",
+        "check_date": "2023-10-27",
+        "name": "Hawker Pharmacy",
+        "website": "http://www.hawkerpharmacy.com.au/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          149.0437398,
+          -35.2432166
+        ]
+      },
+      "id": "node/4067906041"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5586030118",
+        "addr:housenumber": "6",
+        "addr:street": "Pioneer Street",
+        "amenity": "pharmacy",
+        "brand": "Priceline Pharmacy",
+        "brand:wikidata": "Q7242652",
+        "brand:wikipedia": "en:Priceline (Australia)",
+        "dispensing": "yes",
+        "healthcare": "pharmacy",
+        "name": "Priceline Pharmacy Amaroo",
+        "opening_hours": "08:00-22:00",
+        "phone": "+61 2 5116 0433"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          149.1323925,
+          -35.1647549
+        ]
+      },
+      "id": "node/5586030118"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5674575007",
+        "addr:housenumber": "12",
+        "addr:street": "Barker Street",
+        "addr:unit": "3",
+        "amenity": "pharmacy",
+        "dispensing": "yes",
+        "healthcare": "pharmacy",
+        "name": "Discount Chemist",
+        "website": "https://www.yourdiscountchemist.com.au"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          149.1424811,
+          -35.3279364
+        ]
+      },
+      "id": "node/5674575007"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6062403088",
+        "amenity": "pharmacy",
+        "healthcare": "pharmacy",
+        "name": "Capital Chemist Bruce"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          149.0876788,
+          -35.2347464
+        ]
+      },
+      "id": "node/6062403088"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6302638805",
+        "addr:housenumber": "156",
+        "addr:street": "Joplin Lane",
+        "addr:unit": "156-B2",
+        "amenity": "pharmacy",
+        "dispensing": "yes",
+        "drive_through": "no",
+        "healthcare": "pharmacy",
+        "name": "University Pharmacy",
+        "opening_hours": "Mo-Fr 09:00-17:30; Sa-Su off",
+        "phone": "+61 2 6248 6887",
+        "website": "https://university-pharmacy-drugstore.business.site/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          149.1200494,
+          -35.2775707
+        ]
+      },
+      "id": "node/6302638805"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6961333900",
+        "amenity": "pharmacy",
+        "healthcare": "pharmacy",
+        "name": "Capital Chemist"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          149.0229794,
+          -35.2993143
+        ]
+      },
+      "id": "node/6961333900"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7076622769",
+        "amenity": "pharmacy",
+        "healthcare": "pharmacy",
+        "name": "Anketell Street Chemist"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          149.0675904,
+          -35.4152998
+        ]
+      },
+      "id": "node/7076622769"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7140585025",
+        "amenity": "pharmacy",
+        "brand": "TerryWhite Chemmart",
+        "brand:wikidata": "Q24089773",
+        "check_date": "2023-11-19",
+        "dispensing": "yes",
+        "drive_through": "no",
+        "healthcare": "pharmacy",
+        "level": "0",
+        "name": "TerryWhite Chemmart",
+        "opening_hours": "Mo-Fr 09:00-17:00; Sa 09:00-16:00; Su 10:00-14:00",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          149.066914,
+          -35.2375788
+        ]
+      },
+      "id": "node/7140585025"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7168799816",
+        "amenity": "pharmacy",
+        "brand": "Priceline Pharmacy",
+        "brand:wikidata": "Q7242652",
+        "brand:wikipedia": "en:Priceline (Australia)",
+        "dispensing": "yes",
+        "healthcare": "pharmacy",
+        "level": "0",
+        "name": "Priceline Pharmacy",
+        "shop": "variety_store"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          149.0665053,
+          -35.2382875
+        ]
+      },
+      "id": "node/7168799816"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7472973240",
+        "amenity": "pharmacy",
+        "name": "Open Mobility",
+        "shop": "disused"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          149.0625235,
+          -35.2398206
+        ]
+      },
+      "id": "node/7472973240"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7637086847",
+        "amenity": "pharmacy",
+        "check_date": "2023-10-30",
+        "healthcare": "pharmacy",
+        "name": "Spence Pharmacy"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          149.0615837,
+          -35.194792
+        ]
+      },
+      "id": "node/7637086847"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7639592736",
+        "amenity": "pharmacy",
+        "brand": "Priceline Pharmacy",
+        "brand:wikidata": "Q7242652",
+        "healthcare": "pharmacy",
+        "name": "Priceline Pharmacy",
+        "website": "https://www.priceline.com.au/store-finder/country/AU/0176"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          149.0679958,
+          -35.237484
+        ]
+      },
+      "id": "node/7639592736"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/8015545868",
+        "amenity": "pharmacy",
+        "healthcare": "pharmacy",
+        "level": "0",
+        "name": "The Pharmacy On Petrie"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          149.133518,
+          -35.2787089
+        ]
+      },
+      "id": "node/8015545868"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/8260753469",
+        "amenity": "pharmacy",
+        "brand": "Chemist Warehouse",
+        "brand:wikidata": "Q48782120",
+        "brand:wikipedia": "en:Chemist Warehouse",
+        "dispensing": "yes",
+        "healthcare": "pharmacy",
+        "name": "Chemist Warehouse"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          149.0655583,
+          -35.2466962
+        ]
+      },
+      "id": "node/8260753469"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/8488740236",
+        "amenity": "pharmacy",
+        "dispensing": "yes",
+        "healthcare": "pharmacy",
+        "level": "2",
+        "name": "TCH Pharmacy"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          149.1008851,
+          -35.345222
+        ]
+      },
+      "id": "node/8488740236"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/8686328121",
+        "amenity": "pharmacy",
+        "brand": "TerryWhite Chemmart",
+        "brand:wikidata": "Q24089773",
+        "brand:wikipedia": "en:Terry White Chemmart",
+        "healthcare": "pharmacy",
+        "name": "TerryWhite Chemmart"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          149.0270503,
+          -35.2313905
+        ]
+      },
+      "id": "node/8686328121"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/8777987201",
+        "addr:housenumber": "62",
+        "addr:street": "Oatley Court",
+        "addr:unit": "2",
+        "amenity": "pharmacy",
+        "healthcare": "pharmacy",
+        "name": "Aruma Disability Services"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          149.0578144,
+          -35.2425453
+        ]
+      },
+      "id": "node/8777987201"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11180397847",
+        "amenity": "pharmacy",
+        "healthcare": "pharmacy",
+        "name": "Caremore Pharmacy",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          149.019769,
+          -35.2219124
+        ]
+      },
+      "id": "node/11180397847"
+    }
+  ]
+}
