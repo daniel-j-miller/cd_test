@@ -15,4 +15,4 @@ about:
       href: https://github.com/daniel-j-miller
 ---
 
-About this blog
+A place where I might try to put some useful things one day.
