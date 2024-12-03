@@ -58,7 +58,8 @@ The rows where `feature` was `NA` are not actually returned, instead a whole mis
 
 ## Filtering with NAs
 
-`dplr::filter()` and `base::subset()` are a little clearer and provide more likely results when filtering with `NA` values present. First `subset()`:
+`dplyr::filter()` and `base::subset()` are a little clearer and provide results we are more likely to want when filtering with `NA` values present. First `subset()`:
+
 > "For ordinary vectors, the result is simply x[subset & !is.na(subset)]."
 
 ```{r}
