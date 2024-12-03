@@ -29,7 +29,7 @@ dat[dat != 3]
 ```
 But what if our data has `NA` values?
 ```{r}
-# And how we would generally do it, by actually testing for equality
+# Filtering by testing equality/inequality with an NA value
 dat <- c(1,2,3,NA)
 dat[dat != 3]
 ```
