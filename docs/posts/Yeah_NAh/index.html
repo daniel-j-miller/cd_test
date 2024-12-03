@@ -8,6 +8,7 @@
 
 <meta name="author" content="Dan Miller">
 <meta name="dcterms.date" content="2024-03-12">
+<meta name="description" content="A short post about filtering/subsetting data when there are NA values in R">
 
 <title>Data Seance - Yeah NAh</title>
 <style>
@@ -151,8 +152,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
       <h1 class="title">Yeah NAh</h1>
-                                <div class="quarto-categories">
+                  <div>
+        <div class="description">
+          A short post about filtering/subsetting data when there are NA values in R
+        </div>
+      </div>
+                          <div class="quarto-categories">
                 <div class="quarto-category">code</div>
+                <div class="quarto-category">R</div>
               </div>
                   </div>
   </div>
@@ -243,21 +250,21 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="cell-output cell-output-stdout">
 <pre><code>   name feature
 1     A       1
-2     B      NA
-3     C       3
+2     B       1
+3     C      NA
 4     D       1
-5     E      NA
-6     F       2
+5     E       1
+6     F       1
 7     G      NA
-8     H      NA
-9     I      NA
-10    J       1
+8     H       2
+9     I       1
+10    J       2
 11    K       1
-12    L       3
-13    M       1
-14    N       2
-15    O       1
-16    P       2</code></pre>
+12    L       1
+13    M       3
+14    N       1
+15    O      NA
+16    P      NA</code></pre>
 </div>
 </div>
 <div class="cell">
@@ -266,19 +273,20 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="cell-output cell-output-stdout">
 <pre><code>     name feature
 1       A       1
+2       B       1
 NA   &lt;NA&gt;      NA
 4       D       1
+5       E       1
+6       F       1
 NA.1 &lt;NA&gt;      NA
-6       F       2
-NA.2 &lt;NA&gt;      NA
-NA.3 &lt;NA&gt;      NA
-NA.4 &lt;NA&gt;      NA
-10      J       1
+8       H       2
+9       I       1
+10      J       2
 11      K       1
-13      M       1
-14      N       2
-15      O       1
-16      P       2</code></pre>
+12      L       1
+14      N       1
+NA.2 &lt;NA&gt;      NA
+NA.3 &lt;NA&gt;      NA</code></pre>
 </div>
 </div>
 <p>The rows where <code>feature</code> was <code>NA</code> are not returned, instead a whole missing row which is unlikely to ever be the desired result.</p>
@@ -291,14 +299,16 @@ NA.4 &lt;NA&gt;      NA
 <div class="cell-output cell-output-stdout">
 <pre><code>   name feature
 1     A       1
+2     B       1
 4     D       1
-6     F       2
-10    J       1
+5     E       1
+6     F       1
+8     H       2
+9     I       1
+10    J       2
 11    K       1
-13    M       1
-14    N       2
-15    O       1
-16    P       2</code></pre>
+12    L       1
+14    N       1</code></pre>
 </div>
 </div>
 <p>And <code>dplyr::filter()</code> is clearer again:</p>
@@ -319,16 +329,18 @@ From the dplyr::filter() documentation:
 <div class="cell">
 <div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>dat <span class="sc">|&gt;</span> dplyr<span class="sc">::</span><span class="fu">filter</span>(feature <span class="sc">!=</span> <span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>  name feature
-1    A       1
-2    D       1
-3    F       2
-4    J       1
-5    K       1
-6    M       1
-7    N       2
-8    O       1
-9    P       2</code></pre>
+<pre><code>   name feature
+1     A       1
+2     B       1
+3     D       1
+4     E       1
+5     F       1
+6     H       2
+7     I       1
+8     J       2
+9     K       1
+10    L       1
+11    N       1</code></pre>
 </div>
 </div>
 </section>
@@ -338,8 +350,8 @@ From the dplyr::filter() documentation:
 <div class="cell">
 <div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>dat<span class="sc">$</span>feature <span class="sc">!=</span> <span class="dv">3</span> <span class="sc">|</span> <span class="fu">is.na</span>(dat<span class="sc">$</span>feature)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code> [1]  TRUE  TRUE FALSE  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE FALSE
-[13]  TRUE  TRUE  TRUE  TRUE</code></pre>
+<pre><code> [1]  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE
+[13] FALSE  TRUE  TRUE  TRUE</code></pre>
 </div>
 </div>
 <div class="cell">
@@ -347,55 +359,58 @@ From the dplyr::filter() documentation:
 <div class="cell-output cell-output-stdout">
 <pre><code>   name feature
 1     A       1
-2     B      NA
+2     B       1
+3     C      NA
 4     D       1
-5     E      NA
-6     F       2
+5     E       1
+6     F       1
 7     G      NA
-8     H      NA
-9     I      NA
-10    J       1
+8     H       2
+9     I       1
+10    J       2
 11    K       1
-13    M       1
-14    N       2
-15    O       1
-16    P       2</code></pre>
+12    L       1
+14    N       1
+15    O      NA
+16    P      NA</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="fu">subset</span>(dat, feature <span class="sc">!=</span> <span class="dv">3</span> <span class="sc">|</span> <span class="fu">is.na</span>(feature))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>   name feature
 1     A       1
-2     B      NA
+2     B       1
+3     C      NA
 4     D       1
-5     E      NA
-6     F       2
+5     E       1
+6     F       1
 7     G      NA
-8     H      NA
-9     I      NA
-10    J       1
+8     H       2
+9     I       1
+10    J       2
 11    K       1
-13    M       1
-14    N       2
-15    O       1
-16    P       2</code></pre>
+12    L       1
+14    N       1
+15    O      NA
+16    P      NA</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>dat <span class="sc">|&gt;</span> dplyr<span class="sc">::</span><span class="fu">filter</span>(feature <span class="sc">!=</span> <span class="dv">3</span> <span class="sc">|</span> <span class="fu">is.na</span>(feature))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>   name feature
 1     A       1
-2     B      NA
-3     D       1
-4     E      NA
-5     F       2
-6     G      NA
-7     H      NA
-8     I      NA
-9     J       1
-10    K       1
-11    M       1
-12    N       2
-13    O       1
-14    P       2</code></pre>
+2     B       1
+3     C      NA
+4     D       1
+5     E       1
+6     F       1
+7     G      NA
+8     H       2
+9     I       1
+10    J       2
+11    K       1
+12    L       1
+13    N       1
+14    O      NA
+15    P      NA</code></pre>
 </div>
 </div>
 

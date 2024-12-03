@@ -1,8 +1,10 @@
 ---
 title: "Yeah NAh"
 author: "Dan Miller"
+description: "A short post about filtering/subsetting data when there are NA values in R"
+image: thumb.jpg
 date: "2024-03-12"
-categories: [code]
+categories: [code, R]
 ---
 
 
