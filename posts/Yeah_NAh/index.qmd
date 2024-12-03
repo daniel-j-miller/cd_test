@@ -54,7 +54,7 @@ dat
 dat_base <- dat[dat$feature != 3,]
 dat_base
 ```
-The rows where `feature` was `NA` are not actually returned, instead a whole missing row is returned in there place. This is somewhat unexpected unless you know what is happening and it's probably unlikely to be the desired result.
+The rows where `feature` was `NA` are not actually returned, instead a whole missing row is returned in their place. This is somewhat unexpected unless you know what is happening and it's probably unlikely to be the desired result.
 
 ## Filtering with NAs
 
